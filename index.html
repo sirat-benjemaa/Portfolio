@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Portfolio de Sirat Ben Jemaa, ingénieure Full Stack Java, Spring Boot et Angular spécialisée dans les applications bancaires, assurances et architectures microservices."
+    />
+    <title>Sirat Ben Jemaa | Ingénieure Full Stack</title>
+    <script>
+      const preferredTheme = localStorage.getItem("theme");
+      const systemTheme = window.matchMedia("(prefers-color-scheme: dark)")
+        .matches
+        ? "dark"
+        : "light";
+
+      document.documentElement.dataset.theme = preferredTheme || systemTheme;
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Accueil Sirat Ben Jemaa">SBJ</a>
+      <nav class="nav" aria-label="Navigation principale">
+        <a href="#projects">Projets</a>
+        <a href="#experience">Expérience</a>
+        <a href="#skills">Compétences</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button
+        class="theme-toggle"
+        type="button"
+        aria-label="Activer le mode nuit"
+        aria-pressed="false"
+      >
+        <span class="theme-toggle-icon" aria-hidden="true"></span>
+      </button>
+    </header>
+
+    <main id="top">
+      <section class="hero section">
+        <div class="hero-copy">
+          <p class="eyebrow">Full Stack Engineer - Java / Angular</p>
+          <h1>Sirat Ben Jemaa</h1>
+          <p class="hero-text">
+            Je concois des applications web critiques pour la banque et
+            l'assurance, avec des APIs Spring Boot robustes, des interfaces
+            Angular modernes et des architectures microservices deployees en
+            environnements cloud.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="mailto:siratbenjemaa02@gmail.com">
+              Me contacter
+            </a>
+            <a
+              class="button secondary"
+              href="https://github.com/sirat-benjemaa"
+              target="_blank"
+              rel="noreferrer"
+            >
+              GitHub
+            </a>
+            <a class="button secondary" href="cv.pdf" download>
+              Télécharger mon CV
+            </a>
+          </div>
+        </div>
+
+        <div class="profile-panel" aria-label="Profil professionnel">
+          <img
+            class="avatar"
+            src="https://github.com/sirat-benjemaa.png"
+            alt="Sirat Ben Jemaa"
+          />
+          <div>
+            <p class="panel-label">Spécialités</p>
+            <div class="tag-list">
+              <span>Spring Boot</span>
+              <span>Angular</span>
+              <span>Microservices</span>
+              <span>Backbase</span>
+              <span>Kubernetes</span>
+            </div>
+          </div>
+          <dl class="quick-facts">
+            <div>
+              <dt>Expérience</dt>
+              <dd>Près de 3 ans</dd>
+            </div>
+            <div>
+              <dt>Localisation</dt>
+              <dd>Ariana, Tunisie</dd>
+            </div>
+            <div>
+              <dt>Domaines</dt>
+              <dd>Banque - Assurance - DevOps</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="section intro-grid" aria-label="Resume professionnel">
+        <article>
+          <p class="eyebrow">Profil</p>
+          <h2>Des produits fiables pour des environnements exigeants.</h2>
+        </article>
+        <p>
+          Au sein de Value Digital Services, j'ai contribue a la conception et
+          l'evolution de MyBIAT et de l'application Assurances BIAT, dans un
+          ecosysteme Backbase, Keycloak, Spring Boot et OpenShift. J'interviens
+          sur les APIs, les intégrations externes, la sécurité, les workflows et
+          les interfaces utilisateur.
+        </p>
+      </section>
+
+      <section class="section" id="projects">
+        <div class="section-heading">
+          <p class="eyebrow">Selection</p>
+          <h2>Projets marquants</h2>
+        </div>
+        <div class="project-grid">
+          <article class="project-card featured">
+            <div class="project-kicker">Banque digitale</div>
+            <h3>MyBIAT</h3>
+            <p>
+              APIs REST pour comptes, cartes et services clients, integration
+              T24, notifications ActiveMQ, Access Control Backbase et
+              deploiement OpenShift via Jenkins.
+            </p>
+            <ul>
+              <li>Spring Boot, Keycloak, Swagger/OpenAPI</li>
+              <li>JMX, ActiveMQ, services externes STEG, SONEDE, operateurs</li>
+              <li>Architecture microservices dans l'ecosysteme Backbase</li>
+            </ul>
+          </article>
+
+          <article class="project-card">
+            <div class="project-kicker">Assurance digitale</div>
+            <h3>Assurances BIAT</h3>
+            <p>
+              Plateforme assurance pour automobile, voyage et habitation avec
+              parcours Angular, workflows Camunda, paiement ClickToPay et
+              integrations ARIMA et Digiconstat.
+            </p>
+            <ul>
+              <li>Spring Cloud Gateway, Eureka, Docker, Kubernetes</li>
+              <li>Simulation des primes et gestion du sinistre electronique</li>
+              <li>Traitement optimise de fichiers volumineux</li>
+            </ul>
+          </article>
+
+          <article class="project-card">
+            <div class="project-kicker">Economie circulaire</div>
+            <h3>RECAN</h3>
+            <p>
+              Plateforme web dediee a l'economie circulaire en Afrique du Nord,
+              concue en microservices avec orchestration Kubernetes.
+            </p>
+            <ul>
+              <li>Node.js, Express, MongoDB, JWT</li>
+              <li>React, Next.js, Tailwind CSS</li>
+              <li>NATS Streaming, Ingress, Skaffold, Jest</li>
+            </ul>
+          </article>
+
+          <article class="project-card">
+            <div class="project-kicker">E-commerce</div>
+            <h3>Perfecto</h3>
+            <p>
+              Application de comparaison de prix multi-sites, avec backend Java
+              Spring Boot, frontend Angular et persistance MySQL.
+            </p>
+            <ul>
+              <li>APIs REST et interface interactive</li>
+              <li>Versioning GitHub et methode Agile</li>
+              <li>Stage de perfectionnement chez Trust IT</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section experience" id="experience">
+        <div class="section-heading">
+          <p class="eyebrow">Parcours</p>
+          <h2>Expérience professionnelle</h2>
+        </div>
+        <div class="timeline">
+          <article>
+            <span class="date">09/2023 - aujourd’hui</span>
+          <h3>Ingénieure Full Stack - Value Digital Services</h3>
+            <p>
+              Developpement backend Java/Spring Boot, frontend Angular,
+              intégrations bancaires, sécurité Keycloak, CI/CD Jenkins et
+              deploiement OpenShift/Kubernetes.
+            </p>
+          </article>
+          <article>
+            <span class="date">02/2023 - 06/2023</span>
+            <h3>Stage Projet Fin d'Etude - JCTQ</h3>
+            <p>
+              Conception de RECAN, plateforme microservices pour l'economie
+              circulaire avec Node.js, Next.js, MongoDB, NATS et Kubernetes.
+            </p>
+          </article>
+          <article>
+            <span class="date">06/2022 - 09/2022</span>
+            <h3>Stage de Perfectionnement - Trust IT</h3>
+            <p>
+              Developpement de Perfecto, application de comparaison de prix
+              basee sur Spring Boot, Angular et MySQL.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section skills" id="skills">
+        <div class="section-heading">
+          <p class="eyebrow">Stack</p>
+          <h2>Compétences techniques</h2>
+        </div>
+        <div class="skills-grid">
+          <article>
+            <h3>Backend</h3>
+            <p>Java, Spring Boot, Spring Cloud, Spring Security, REST APIs</p>
+          </article>
+          <article>
+            <h3>Frontend</h3>
+            <p>Angular, React, Next.js</p>
+          </article>
+          <article>
+            <h3>DevOps</h3>
+            <p>Docker, Kubernetes, Jenkins, OpenShift, Nexus</p>
+          </article>
+          <article>
+            <h3>Data</h3>
+            <p>MySQL, MongoDB</p>
+          </article>
+          <article>
+            <h3>Sécurité</h3>
+            <p>Keycloak, OAuth 2.0, JWT, Access Control</p>
+          </article>
+          <article>
+            <h3>Integration</h3>
+            <p>ActiveMQ, RabbitMQ, NATS Streaming, Backbase</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section credentials">
+        <div class="section-heading">
+          <p class="eyebrow">Formation</p>
+          <h2>Diplômes et certifications</h2>
+        </div>
+        <div class="credential-grid">
+          <article>
+            <span>2023 - 2027</span>
+            <h3>Cycle Ingénieur en génie logiciel</h3>
+            <p>ESPRIT - Ariana, Tunisie</p>
+          </article>
+          <article>
+            <span>2020 - 2023</span>
+            <h3>Licence en Gestion des TIC</h3>
+            <p>ISET'COM - El Ghazela, Ariana</p>
+          </article>
+          <article>
+            <span>Certifications</span>
+            <h3>Backbase, Microservices et Spring Boot</h3>
+            <p>
+              Backbase Certified Developer, Udemy Node.js/React Microservices,
+              Spring Boot Docker Kubernetes.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section contact" id="contact">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2>Construisons des produits utiles, solides et bien intégrés.</h2>
+        </div>
+        <div class="contact-links">
+          <a href="mailto:siratbenjemaa02@gmail.com">siratbenjemaa02@gmail.com</a>
+          <a href="tel:+21628288300">+216 28 288 300</a>
+          <a
+            href="https://linkedin.com/in/sirat-ben-jemaa"
+            target="_blank"
+            rel="noreferrer"
+          >
+            LinkedIn
+          </a>
+          <a
+            href="https://github.com/sirat-benjemaa"
+            target="_blank"
+            rel="noreferrer"
+          >
+            GitHub
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Copyright 2026 Sirat Ben Jemaa</p>
+      <p>Java - Angular - Spring Boot - Microservices</p>
+    </footer>
+    <script>
+      const themeToggle = document.querySelector(".theme-toggle");
+      const prefersDark = window.matchMedia("(prefers-color-scheme: dark)");
+
+      function setTheme(theme) {
+        const isDark = theme === "dark";
+
+        document.documentElement.dataset.theme = theme;
+        themeToggle.setAttribute(
+          "aria-label",
+          isDark ? "Activer le mode jour" : "Activer le mode nuit"
+        );
+        themeToggle.setAttribute("aria-pressed", String(isDark));
+      }
+
+      setTheme(document.documentElement.dataset.theme);
+
+      themeToggle.addEventListener("click", () => {
+        const nextTheme =
+          document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+
+        localStorage.setItem("theme", nextTheme);
+        setTheme(nextTheme);
+      });
+
+      prefersDark.addEventListener("change", (event) => {
+        if (!localStorage.getItem("theme")) {
+          setTheme(event.matches ? "dark" : "light");
+        }
+      });
+    </script>
+  </body>
+</html>
