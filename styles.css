@@ -114,7 +114,8 @@ a {
   color: var(--teal-dark);
 }
 
-.theme-toggle {
+.theme-toggle,
+.language-toggle {
   display: grid;
   width: 42px;
   min-height: 42px;
@@ -134,10 +135,15 @@ a {
     transform 180ms ease;
 }
 
-.theme-toggle:hover {
+.theme-toggle:hover,
+.language-toggle:hover {
   border-color: rgba(15, 118, 110, 0.4);
   box-shadow: var(--hover-shadow);
   transform: translateY(-2px);
+}
+
+.language-toggle {
+  letter-spacing: 0;
 }
 
 .theme-toggle-icon {

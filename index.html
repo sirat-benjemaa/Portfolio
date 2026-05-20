@@ -16,6 +16,7 @@
         : "light";
 
       document.documentElement.dataset.theme = preferredTheme || systemTheme;
+      document.documentElement.lang = localStorage.getItem("language") || "fr";
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -27,12 +28,23 @@
   </head>
   <body>
     <header class="site-header">
-      <a class="brand" href="#top" aria-label="Accueil Sirat Ben Jemaa">SBJ</a>
-      <nav class="nav" aria-label="Navigation principale">
-        <a href="#projects">Projets</a>
-        <a href="#experience">Expérience</a>
-        <a href="#skills">Compétences</a>
-        <a href="#contact">Contact</a>
+      <a
+        class="brand"
+        href="#top"
+        aria-label="Accueil Sirat Ben Jemaa"
+        data-i18n-aria-label="brand.aria"
+      >
+        SBJ
+      </a>
+      <nav
+        class="nav"
+        aria-label="Navigation principale"
+        data-i18n-aria-label="nav.aria"
+      >
+        <a href="#projects" data-i18n="nav.projects">Projets</a>
+        <a href="#experience" data-i18n="nav.experience">Expérience</a>
+        <a href="#skills" data-i18n="nav.skills">Compétences</a>
+        <a href="#contact" data-i18n="nav.contact">Contact</a>
       </nav>
       <button
         class="theme-toggle"
@@ -42,21 +54,34 @@
       >
         <span class="theme-toggle-icon" aria-hidden="true"></span>
       </button>
+      <button
+        class="language-toggle"
+        type="button"
+        aria-label="Switch to English"
+      >
+        EN
+      </button>
     </header>
 
     <main id="top">
       <section class="hero section">
         <div class="hero-copy">
-          <p class="eyebrow">Full Stack Engineer - Java / Angular</p>
+          <p class="eyebrow" data-i18n="hero.eyebrow">
+            Full Stack Engineer - Java / Angular
+          </p>
           <h1>Sirat Ben Jemaa</h1>
-          <p class="hero-text">
-            Je concois des applications web critiques pour la banque et
+          <p class="hero-text" data-i18n="hero.text">
+            Je conçois des applications web critiques pour la banque et
             l'assurance, avec des APIs Spring Boot robustes, des interfaces
-            Angular modernes et des architectures microservices deployees en
+            Angular modernes et des architectures microservices déployées en
             environnements cloud.
           </p>
           <div class="hero-actions">
-            <a class="button primary" href="mailto:siratbenjemaa02@gmail.com">
+            <a
+              class="button primary"
+              href="mailto:siratbenjemaa02@gmail.com"
+              data-i18n="hero.contact"
+            >
               Me contacter
             </a>
             <a
@@ -67,20 +92,26 @@
             >
               GitHub
             </a>
-            <a class="button secondary" href="cv.pdf" download>
+            <a class="button secondary" href="cv.pdf" download data-i18n="hero.cv">
               Télécharger mon CV
             </a>
           </div>
         </div>
 
-        <div class="profile-panel" aria-label="Profil professionnel">
+        <div
+          class="profile-panel"
+          aria-label="Profil professionnel"
+          data-i18n-aria-label="profile.aria"
+        >
           <img
             class="avatar"
             src="https://github.com/sirat-benjemaa.png"
             alt="Sirat Ben Jemaa"
           />
           <div>
-            <p class="panel-label">Spécialités</p>
+            <p class="panel-label" data-i18n="profile.specialties">
+              Spécialités
+            </p>
             <div class="tag-list">
               <span>Spring Boot</span>
               <span>Angular</span>
@@ -91,30 +122,38 @@
           </div>
           <dl class="quick-facts">
             <div>
-              <dt>Expérience</dt>
-              <dd>Près de 3 ans</dd>
+              <dt data-i18n="profile.experienceLabel">Expérience</dt>
+              <dd data-i18n="profile.experienceValue">Près de 3 ans</dd>
             </div>
             <div>
-              <dt>Localisation</dt>
-              <dd>Ariana, Tunisie</dd>
+              <dt data-i18n="profile.locationLabel">Localisation</dt>
+              <dd data-i18n="profile.locationValue">Ariana, Tunisie</dd>
             </div>
             <div>
-              <dt>Domaines</dt>
-              <dd>Banque - Assurance - DevOps</dd>
+              <dt data-i18n="profile.domainsLabel">Domaines</dt>
+              <dd data-i18n="profile.domainsValue">
+                Banque - Assurance - DevOps
+              </dd>
             </div>
           </dl>
         </div>
       </section>
 
-      <section class="section intro-grid" aria-label="Resume professionnel">
+      <section
+        class="section intro-grid"
+        aria-label="Résumé professionnel"
+        data-i18n-aria-label="intro.aria"
+      >
         <article>
-          <p class="eyebrow">Profil</p>
-          <h2>Des produits fiables pour des environnements exigeants.</h2>
+          <p class="eyebrow" data-i18n="intro.eyebrow">Profil</p>
+          <h2 data-i18n="intro.title">
+            Des produits fiables pour des environnements exigeants.
+          </h2>
         </article>
-        <p>
-          Au sein de Value Digital Services, j'ai contribue a la conception et
-          l'evolution de MyBIAT et de l'application Assurances BIAT, dans un
-          ecosysteme Backbase, Keycloak, Spring Boot et OpenShift. J'interviens
+        <p data-i18n="intro.text">
+          Au sein de Value Digital Services, j'ai contribué à la conception et
+          l'évolution de MyBIAT et de l'application Assurances BIAT, dans un
+          écosystème Backbase, Keycloak, Spring Boot et OpenShift. J'interviens
           sur les APIs, les intégrations externes, la sécurité, les workflows et
           les interfaces utilisateur.
         </p>
@@ -122,46 +161,60 @@
 
       <section class="section" id="projects">
         <div class="section-heading">
-          <p class="eyebrow">Selection</p>
-          <h2>Projets marquants</h2>
+          <p class="eyebrow" data-i18n="projects.eyebrow">Sélection</p>
+          <h2 data-i18n="projects.title">Projets marquants</h2>
         </div>
         <div class="project-grid">
           <article class="project-card featured">
-            <div class="project-kicker">Banque digitale</div>
+            <div class="project-kicker" data-i18n="projects.mybiat.kicker">
+              Banque digitale
+            </div>
             <h3>MyBIAT</h3>
-            <p>
-              APIs REST pour comptes, cartes et services clients, integration
+            <p data-i18n="projects.mybiat.text">
+              APIs REST pour comptes, cartes et services clients, intégration
               T24, notifications ActiveMQ, Access Control Backbase et
-              deploiement OpenShift via Jenkins.
+              déploiement OpenShift via Jenkins.
             </p>
             <ul>
               <li>Spring Boot, Keycloak, Swagger/OpenAPI</li>
-              <li>JMX, ActiveMQ, services externes STEG, SONEDE, operateurs</li>
-              <li>Architecture microservices dans l'ecosysteme Backbase</li>
+              <li data-i18n="projects.mybiat.item2">
+                JMX, ActiveMQ, services externes STEG, SONEDE, opérateurs
+              </li>
+              <li data-i18n="projects.mybiat.item3">
+                Architecture microservices dans l'écosystème Backbase
+              </li>
             </ul>
           </article>
 
           <article class="project-card">
-            <div class="project-kicker">Assurance digitale</div>
+            <div class="project-kicker" data-i18n="projects.insurance.kicker">
+              Assurance digitale
+            </div>
             <h3>Assurances BIAT</h3>
-            <p>
+            <p data-i18n="projects.insurance.text">
               Plateforme assurance pour automobile, voyage et habitation avec
               parcours Angular, workflows Camunda, paiement ClickToPay et
-              integrations ARIMA et Digiconstat.
+              intégrations ARIMA et Digiconstat.
             </p>
             <ul>
               <li>Spring Cloud Gateway, Eureka, Docker, Kubernetes</li>
-              <li>Simulation des primes et gestion du sinistre electronique</li>
-              <li>Traitement optimise de fichiers volumineux</li>
+              <li data-i18n="projects.insurance.item2">
+                Simulation des primes et gestion du sinistre électronique
+              </li>
+              <li data-i18n="projects.insurance.item3">
+                Traitement optimisé de fichiers volumineux
+              </li>
             </ul>
           </article>
 
           <article class="project-card">
-            <div class="project-kicker">Economie circulaire</div>
+            <div class="project-kicker" data-i18n="projects.recan.kicker">
+              Économie circulaire
+            </div>
             <h3>RECAN</h3>
-            <p>
-              Plateforme web dediee a l'economie circulaire en Afrique du Nord,
-              concue en microservices avec orchestration Kubernetes.
+            <p data-i18n="projects.recan.text">
+              Plateforme web dédiée à l'économie circulaire en Afrique du Nord,
+              conçue en microservices avec orchestration Kubernetes.
             </p>
             <ul>
               <li>Node.js, Express, MongoDB, JWT</li>
@@ -171,16 +224,24 @@
           </article>
 
           <article class="project-card">
-            <div class="project-kicker">E-commerce</div>
+            <div class="project-kicker" data-i18n="projects.perfecto.kicker">
+              E-commerce
+            </div>
             <h3>Perfecto</h3>
-            <p>
+            <p data-i18n="projects.perfecto.text">
               Application de comparaison de prix multi-sites, avec backend Java
               Spring Boot, frontend Angular et persistance MySQL.
             </p>
             <ul>
-              <li>APIs REST et interface interactive</li>
-              <li>Versioning GitHub et methode Agile</li>
-              <li>Stage de perfectionnement chez Trust IT</li>
+              <li data-i18n="projects.perfecto.item1">
+                APIs REST et interface interactive
+              </li>
+              <li data-i18n="projects.perfecto.item2">
+                Versioning GitHub et méthode Agile
+              </li>
+              <li data-i18n="projects.perfecto.item3">
+                Stage de perfectionnement chez Trust IT
+              </li>
             </ul>
           </article>
         </div>
@@ -188,33 +249,41 @@
 
       <section class="section experience" id="experience">
         <div class="section-heading">
-          <p class="eyebrow">Parcours</p>
-          <h2>Expérience professionnelle</h2>
+          <p class="eyebrow" data-i18n="experience.eyebrow">Parcours</p>
+          <h2 data-i18n="experience.title">Expérience professionnelle</h2>
         </div>
         <div class="timeline">
           <article>
-            <span class="date">09/2023 - aujourd’hui</span>
-          <h3>Ingénieure Full Stack - Value Digital Services</h3>
-            <p>
-              Developpement backend Java/Spring Boot, frontend Angular,
+            <span class="date" data-i18n="experience.vds.date">
+              09/2023 - aujourd'hui
+            </span>
+            <h3 data-i18n="experience.vds.title">
+              Ingénieure Full Stack - Value Digital Services
+            </h3>
+            <p data-i18n="experience.vds.text">
+              Développement backend Java/Spring Boot, frontend Angular,
               intégrations bancaires, sécurité Keycloak, CI/CD Jenkins et
-              deploiement OpenShift/Kubernetes.
+              déploiement OpenShift/Kubernetes.
             </p>
           </article>
           <article>
             <span class="date">02/2023 - 06/2023</span>
-            <h3>Stage Projet Fin d'Etude - JCTQ</h3>
-            <p>
-              Conception de RECAN, plateforme microservices pour l'economie
+            <h3 data-i18n="experience.jctq.title">
+              Stage Projet Fin d'Étude - JCTQ
+            </h3>
+            <p data-i18n="experience.jctq.text">
+              Conception de RECAN, plateforme microservices pour l'économie
               circulaire avec Node.js, Next.js, MongoDB, NATS et Kubernetes.
             </p>
           </article>
           <article>
             <span class="date">06/2022 - 09/2022</span>
-            <h3>Stage de Perfectionnement - Trust IT</h3>
-            <p>
-              Developpement de Perfecto, application de comparaison de prix
-              basee sur Spring Boot, Angular et MySQL.
+            <h3 data-i18n="experience.trustit.title">
+              Stage de Perfectionnement - Trust IT
+            </h3>
+            <p data-i18n="experience.trustit.text">
+              Développement de Perfecto, application de comparaison de prix
+              basée sur Spring Boot, Angular et MySQL.
             </p>
           </article>
         </div>
@@ -223,7 +292,7 @@
       <section class="section skills" id="skills">
         <div class="section-heading">
           <p class="eyebrow">Stack</p>
-          <h2>Compétences techniques</h2>
+          <h2 data-i18n="skills.title">Compétences techniques</h2>
         </div>
         <div class="skills-grid">
           <article>
@@ -243,11 +312,11 @@
             <p>MySQL, MongoDB</p>
           </article>
           <article>
-            <h3>Sécurité</h3>
+            <h3 data-i18n="skills.security">Sécurité</h3>
             <p>Keycloak, OAuth 2.0, JWT, Access Control</p>
           </article>
           <article>
-            <h3>Integration</h3>
+            <h3 data-i18n="skills.integration">Intégration</h3>
             <p>ActiveMQ, RabbitMQ, NATS Streaming, Backbase</p>
           </article>
         </div>
@@ -255,23 +324,35 @@
 
       <section class="section credentials">
         <div class="section-heading">
-          <p class="eyebrow">Formation</p>
-          <h2>Diplômes et certifications</h2>
+          <p class="eyebrow" data-i18n="credentials.eyebrow">Formation</p>
+          <h2 data-i18n="credentials.title">Diplômes et certifications</h2>
         </div>
         <div class="credential-grid">
           <article>
             <span>2023 - 2027</span>
-            <h3>Cycle Ingénieur en génie logiciel</h3>
-            <p>ESPRIT - Ariana, Tunisie</p>
+            <h3 data-i18n="credentials.engineering.title">
+              Cycle Ingénieur en génie logiciel
+            </h3>
+            <p data-i18n="credentials.engineering.school">
+              ESPRIT - Ariana, Tunisie
+            </p>
           </article>
           <article>
             <span>2020 - 2023</span>
-            <h3>Licence en Gestion des TIC</h3>
-            <p>ISET'COM - El Ghazela, Ariana</p>
+            <h3 data-i18n="credentials.license.title">
+              Licence en Gestion des TIC
+            </h3>
+            <p data-i18n="credentials.license.school">
+              ISET'COM - El Ghazela, Ariana
+            </p>
           </article>
           <article>
-            <span>Certifications</span>
-            <h3>Backbase, Microservices et Spring Boot</h3>
+            <span data-i18n="credentials.certifications.label">
+              Certifications
+            </span>
+            <h3 data-i18n="credentials.certifications.title">
+              Backbase, Microservices et Spring Boot
+            </h3>
             <p>
               Backbase Certified Developer, Udemy Node.js/React Microservices,
               Spring Boot Docker Kubernetes.
@@ -283,7 +364,9 @@
       <section class="section contact" id="contact">
         <div>
           <p class="eyebrow">Contact</p>
-          <h2>Construisons des produits utiles, solides et bien intégrés.</h2>
+          <h2 data-i18n="contact.title">
+            Construisons des produits utiles, solides et bien intégrés.
+          </h2>
         </div>
         <div class="contact-links">
           <a href="mailto:siratbenjemaa02@gmail.com">siratbenjemaa02@gmail.com</a>
@@ -311,21 +394,224 @@
       <p>Java - Angular - Spring Boot - Microservices</p>
     </footer>
     <script>
+      const translations = {
+        fr: {
+          pageTitle: "Sirat Ben Jemaa | Ingénieure Full Stack",
+          pageDescription:
+            "Portfolio de Sirat Ben Jemaa, ingénieure Full Stack Java, Spring Boot et Angular spécialisée dans les applications bancaires, assurances et architectures microservices.",
+          languageLabel: "Switch to English",
+          languageButton: "EN",
+          themeLightLabel: "Activer le mode jour",
+          themeDarkLabel: "Activer le mode nuit",
+          "brand.aria": "Accueil Sirat Ben Jemaa",
+          "nav.aria": "Navigation principale",
+          "nav.projects": "Projets",
+          "nav.experience": "Expérience",
+          "nav.skills": "Compétences",
+          "nav.contact": "Contact",
+          "hero.eyebrow": "Full Stack Engineer - Java / Angular",
+          "hero.text":
+            "Je conçois des applications web critiques pour la banque et l'assurance, avec des APIs Spring Boot robustes, des interfaces Angular modernes et des architectures microservices déployées en environnements cloud.",
+          "hero.contact": "Me contacter",
+          "hero.cv": "Télécharger mon CV",
+          "profile.aria": "Profil professionnel",
+          "profile.specialties": "Spécialités",
+          "profile.experienceLabel": "Expérience",
+          "profile.experienceValue": "Près de 3 ans",
+          "profile.locationLabel": "Localisation",
+          "profile.locationValue": "Ariana, Tunisie",
+          "profile.domainsLabel": "Domaines",
+          "profile.domainsValue": "Banque - Assurance - DevOps",
+          "intro.aria": "Résumé professionnel",
+          "intro.eyebrow": "Profil",
+          "intro.title":
+            "Des produits fiables pour des environnements exigeants.",
+          "intro.text":
+            "Au sein de Value Digital Services, j'ai contribué à la conception et l'évolution de MyBIAT et de l'application Assurances BIAT, dans un écosystème Backbase, Keycloak, Spring Boot et OpenShift. J'interviens sur les APIs, les intégrations externes, la sécurité, les workflows et les interfaces utilisateur.",
+          "projects.eyebrow": "Sélection",
+          "projects.title": "Projets marquants",
+          "projects.mybiat.kicker": "Banque digitale",
+          "projects.mybiat.text":
+            "APIs REST pour comptes, cartes et services clients, intégration T24, notifications ActiveMQ, Access Control Backbase et déploiement OpenShift via Jenkins.",
+          "projects.mybiat.item2":
+            "JMX, ActiveMQ, services externes STEG, SONEDE, opérateurs",
+          "projects.mybiat.item3":
+            "Architecture microservices dans l'écosystème Backbase",
+          "projects.insurance.kicker": "Assurance digitale",
+          "projects.insurance.text":
+            "Plateforme assurance pour automobile, voyage et habitation avec parcours Angular, workflows Camunda, paiement ClickToPay et intégrations ARIMA et Digiconstat.",
+          "projects.insurance.item2":
+            "Simulation des primes et gestion du sinistre électronique",
+          "projects.insurance.item3":
+            "Traitement optimisé de fichiers volumineux",
+          "projects.recan.kicker": "Économie circulaire",
+          "projects.recan.text":
+            "Plateforme web dédiée à l'économie circulaire en Afrique du Nord, conçue en microservices avec orchestration Kubernetes.",
+          "projects.perfecto.kicker": "E-commerce",
+          "projects.perfecto.text":
+            "Application de comparaison de prix multi-sites, avec backend Java Spring Boot, frontend Angular et persistance MySQL.",
+          "projects.perfecto.item1": "APIs REST et interface interactive",
+          "projects.perfecto.item2": "Versioning GitHub et méthode Agile",
+          "projects.perfecto.item3": "Stage de perfectionnement chez Trust IT",
+          "experience.eyebrow": "Parcours",
+          "experience.title": "Expérience professionnelle",
+          "experience.vds.date": "09/2023 - aujourd'hui",
+          "experience.vds.title":
+            "Ingénieure Full Stack - Value Digital Services",
+          "experience.vds.text":
+            "Développement backend Java/Spring Boot, frontend Angular, intégrations bancaires, sécurité Keycloak, CI/CD Jenkins et déploiement OpenShift/Kubernetes.",
+          "experience.jctq.title": "Stage Projet Fin d'Étude - JCTQ",
+          "experience.jctq.text":
+            "Conception de RECAN, plateforme microservices pour l'économie circulaire avec Node.js, Next.js, MongoDB, NATS et Kubernetes.",
+          "experience.trustit.title": "Stage de Perfectionnement - Trust IT",
+          "experience.trustit.text":
+            "Développement de Perfecto, application de comparaison de prix basée sur Spring Boot, Angular et MySQL.",
+          "skills.title": "Compétences techniques",
+          "skills.security": "Sécurité",
+          "skills.integration": "Intégration",
+          "credentials.eyebrow": "Formation",
+          "credentials.title": "Diplômes et certifications",
+          "credentials.engineering.title":
+            "Cycle Ingénieur en génie logiciel",
+          "credentials.engineering.school": "ESPRIT - Ariana, Tunisie",
+          "credentials.license.title": "Licence en Gestion des TIC",
+          "credentials.license.school": "ISET'COM - El Ghazela, Ariana",
+          "credentials.certifications.label": "Certifications",
+          "credentials.certifications.title":
+            "Backbase, Microservices et Spring Boot",
+          "contact.title":
+            "Construisons des produits utiles, solides et bien intégrés.",
+        },
+        en: {
+          pageTitle: "Sirat Ben Jemaa | Full Stack Engineer",
+          pageDescription:
+            "Portfolio of Sirat Ben Jemaa, Full Stack Java, Spring Boot and Angular engineer specialized in banking, insurance and microservices architectures.",
+          languageLabel: "Passer en français",
+          languageButton: "FR",
+          themeLightLabel: "Switch to light mode",
+          themeDarkLabel: "Switch to dark mode",
+          "brand.aria": "Sirat Ben Jemaa home",
+          "nav.aria": "Main navigation",
+          "nav.projects": "Projects",
+          "nav.experience": "Experience",
+          "nav.skills": "Skills",
+          "nav.contact": "Contact",
+          "hero.eyebrow": "Full Stack Engineer - Java / Angular",
+          "hero.text":
+            "I build critical web applications for banking and insurance, with robust Spring Boot APIs, modern Angular interfaces, and microservices architectures deployed in cloud environments.",
+          "hero.contact": "Contact me",
+          "hero.cv": "Download my CV",
+          "profile.aria": "Professional profile",
+          "profile.specialties": "Specialties",
+          "profile.experienceLabel": "Experience",
+          "profile.experienceValue": "Nearly 3 years",
+          "profile.locationLabel": "Location",
+          "profile.locationValue": "Ariana, Tunisia",
+          "profile.domainsLabel": "Domains",
+          "profile.domainsValue": "Banking - Insurance - DevOps",
+          "intro.aria": "Professional summary",
+          "intro.eyebrow": "Profile",
+          "intro.title": "Reliable products for demanding environments.",
+          "intro.text":
+            "At Value Digital Services, I contributed to the design and evolution of MyBIAT and the Assurances BIAT application within a Backbase, Keycloak, Spring Boot and OpenShift ecosystem. I work on APIs, external integrations, security, workflows and user interfaces.",
+          "projects.eyebrow": "Selected work",
+          "projects.title": "Key projects",
+          "projects.mybiat.kicker": "Digital banking",
+          "projects.mybiat.text":
+            "REST APIs for accounts, cards and customer services, T24 integration, ActiveMQ notifications, Backbase Access Control and OpenShift deployment through Jenkins.",
+          "projects.mybiat.item2":
+            "JMX, ActiveMQ, external services STEG, SONEDE and telecom operators",
+          "projects.mybiat.item3":
+            "Microservices architecture in the Backbase ecosystem",
+          "projects.insurance.kicker": "Digital insurance",
+          "projects.insurance.text":
+            "Insurance platform for car, travel and home products with Angular journeys, Camunda workflows, ClickToPay payment and ARIMA and Digiconstat integrations.",
+          "projects.insurance.item2":
+            "Premium simulation and digital claim management",
+          "projects.insurance.item3": "Optimized processing of large files",
+          "projects.recan.kicker": "Circular economy",
+          "projects.recan.text":
+            "Web platform dedicated to circular economy in North Africa, designed with microservices and Kubernetes orchestration.",
+          "projects.perfecto.kicker": "E-commerce",
+          "projects.perfecto.text":
+            "Multi-site price comparison application with a Java Spring Boot backend, Angular frontend and MySQL persistence.",
+          "projects.perfecto.item1": "REST APIs and interactive interface",
+          "projects.perfecto.item2": "GitHub versioning and Agile method",
+          "projects.perfecto.item3": "Professional internship at Trust IT",
+          "experience.eyebrow": "Career",
+          "experience.title": "Professional experience",
+          "experience.vds.date": "09/2023 - present",
+          "experience.vds.title":
+            "Full Stack Engineer - Value Digital Services",
+          "experience.vds.text":
+            "Java/Spring Boot backend development, Angular frontend, banking integrations, Keycloak security, Jenkins CI/CD and OpenShift/Kubernetes deployment.",
+          "experience.jctq.title": "Final Year Project Internship - JCTQ",
+          "experience.jctq.text":
+            "Designed RECAN, a microservices platform for circular economy with Node.js, Next.js, MongoDB, NATS and Kubernetes.",
+          "experience.trustit.title": "Professional Internship - Trust IT",
+          "experience.trustit.text":
+            "Developed Perfecto, a price comparison application based on Spring Boot, Angular and MySQL.",
+          "skills.title": "Technical skills",
+          "skills.security": "Security",
+          "skills.integration": "Integration",
+          "credentials.eyebrow": "Education",
+          "credentials.title": "Degrees and certifications",
+          "credentials.engineering.title":
+            "Engineering degree cycle in software engineering",
+          "credentials.engineering.school": "ESPRIT - Ariana, Tunisia",
+          "credentials.license.title": "Bachelor's degree in ICT Management",
+          "credentials.license.school": "ISET'COM - El Ghazela, Ariana",
+          "credentials.certifications.label": "Certifications",
+          "credentials.certifications.title":
+            "Backbase, Microservices and Spring Boot",
+          "contact.title":
+            "Let's build useful, reliable and well-integrated products.",
+        },
+      };
+
       const themeToggle = document.querySelector(".theme-toggle");
+      const languageToggle = document.querySelector(".language-toggle");
       const prefersDark = window.matchMedia("(prefers-color-scheme: dark)");
+      const description = document.querySelector('meta[name="description"]');
 
       function setTheme(theme) {
         const isDark = theme === "dark";
+        const language = document.documentElement.lang === "en" ? "en" : "fr";
+        const dictionary = translations[language];
 
         document.documentElement.dataset.theme = theme;
         themeToggle.setAttribute(
           "aria-label",
-          isDark ? "Activer le mode jour" : "Activer le mode nuit"
+          isDark ? dictionary.themeLightLabel : dictionary.themeDarkLabel
         );
         themeToggle.setAttribute("aria-pressed", String(isDark));
       }
 
+      function setLanguage(language) {
+        const dictionary = translations[language];
+
+        document.documentElement.lang = language;
+        document.title = dictionary.pageTitle;
+        description.setAttribute("content", dictionary.pageDescription);
+        languageToggle.textContent = dictionary.languageButton;
+        languageToggle.setAttribute("aria-label", dictionary.languageLabel);
+
+        document.querySelectorAll("[data-i18n]").forEach((element) => {
+          element.textContent = dictionary[element.dataset.i18n];
+        });
+
+        document.querySelectorAll("[data-i18n-aria-label]").forEach((element) => {
+          element.setAttribute(
+            "aria-label",
+            dictionary[element.dataset.i18nAriaLabel]
+          );
+        });
+
+        setTheme(document.documentElement.dataset.theme);
+      }
+
       setTheme(document.documentElement.dataset.theme);
+      setLanguage(document.documentElement.lang === "en" ? "en" : "fr");
 
       themeToggle.addEventListener("click", () => {
         const nextTheme =
@@ -333,6 +619,13 @@
 
         localStorage.setItem("theme", nextTheme);
         setTheme(nextTheme);
+      });
+
+      languageToggle.addEventListener("click", () => {
+        const nextLanguage = document.documentElement.lang === "fr" ? "en" : "fr";
+
+        localStorage.setItem("language", nextLanguage);
+        setLanguage(nextLanguage);
       });
 
       prefersDark.addEventListener("change", (event) => {
