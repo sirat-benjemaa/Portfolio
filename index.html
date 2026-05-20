@@ -94,7 +94,13 @@
             >
               GitHub
             </a>
-            <a class="button secondary" href="cv.pdf" download data-i18n="hero.cv">
+            <a
+              class="button secondary"
+              href="cv.pdf"
+              download="Sirat_Benjemaa_CV.pdf"
+              data-i18n="hero.cv"
+              data-cv-link
+            >
               Télécharger mon CV
             </a>
           </div>
@@ -403,6 +409,8 @@
             "Portfolio de Sirat Ben Jemaa, ingénieure Full Stack Java, Spring Boot et Angular spécialisée dans les applications bancaires, assurances et architectures microservices.",
           languageLabel: "Switch to English",
           languageButton: "FR",
+          cvFile: "cv.pdf",
+          cvDownloadName: "Sirat_Benjemaa_CV.pdf",
           themeLightLabel: "Activer le mode jour",
           themeDarkLabel: "Activer le mode nuit",
           "brand.aria": "Accueil Sirat Ben Jemaa",
@@ -490,6 +498,8 @@
             "Portfolio of Sirat Ben Jemaa, Full Stack Java, Spring Boot and Angular engineer specialized in banking, insurance and microservices architectures.",
           languageLabel: "Passer en français",
           languageButton: "EN",
+          cvFile: "resume.pdf",
+          cvDownloadName: "Sirat_Benjemaa_Resume.pdf",
           themeLightLabel: "Switch to light mode",
           themeDarkLabel: "Switch to dark mode",
           "brand.aria": "Sirat Ben Jemaa home",
@@ -573,6 +583,7 @@
 
       const themeToggle = document.querySelector(".theme-toggle");
       const languageToggle = document.querySelector(".language-toggle");
+      const cvLink = document.querySelector("[data-cv-link]");
       const prefersDark = window.matchMedia("(prefers-color-scheme: dark)");
       const description = document.querySelector('meta[name="description"]');
 
@@ -597,6 +608,8 @@
         description.setAttribute("content", dictionary.pageDescription);
         languageToggle.textContent = dictionary.languageButton;
         languageToggle.setAttribute("aria-label", dictionary.languageLabel);
+        cvLink.setAttribute("href", dictionary.cvFile);
+        cvLink.setAttribute("download", dictionary.cvDownloadName);
 
         document.querySelectorAll("[data-i18n]").forEach((element) => {
           element.textContent = dictionary[element.dataset.i18n];
