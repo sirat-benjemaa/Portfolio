@@ -114,6 +114,12 @@ a {
   color: var(--teal-dark);
 }
 
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
 .theme-toggle,
 .language-toggle {
   display: grid;
@@ -476,7 +482,7 @@ h3 {
     align-items: flex-start;
   }
 
-  .theme-toggle {
+  .header-actions {
     margin-left: auto;
   }
 
