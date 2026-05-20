@@ -8,19 +8,19 @@
   --surface: rgba(255, 255, 255, 0.92);
   --surface-strong: #ffffff;
   --header-bg: rgba(255, 255, 255, 0.94);
-  --grid-line: rgba(163, 61, 255, 0.06);
+  --grid-line: rgba(79, 70, 229, 0.06);
   --soft-line: rgba(218, 226, 236, 0.86);
-  --teal: #a53dff;
+  --teal: #4f46e5;
   --on-teal: #ffffff;
-  --teal-dark: #7b24e6;
-  --coral: #ec2dbf;
-  --mustard: #d0942c;
+  --teal-dark: #4338ca;
+  --coral: #2563eb;
+  --mustard: #d97706;
   --navy: #22304a;
   --shadow: 0 28px 72px rgba(19, 34, 56, 0.12);
-  --hover-shadow: 0 16px 36px rgba(165, 61, 255, 0.18);
+  --hover-shadow: 0 16px 36px rgba(79, 70, 229, 0.16);
   --button-bg: rgba(255, 255, 255, 0.82);
   --avatar-bg: #eef3f8;
-  --accent-gradient: linear-gradient(135deg, #a53dff 0%, #ec2dbf 100%);
+  --accent-gradient: linear-gradient(135deg, #4f46e5 0%, #2563eb 100%);
 }
 
 :root[data-theme="dark"] {
@@ -33,19 +33,19 @@
   --surface: rgba(24, 32, 48, 0.9);
   --surface-strong: #171f30;
   --header-bg: rgba(16, 21, 34, 0.94);
-  --grid-line: rgba(165, 61, 255, 0.08);
+  --grid-line: rgba(129, 140, 248, 0.08);
   --soft-line: rgba(93, 103, 124, 0.42);
-  --teal: #b862ff;
+  --teal: #818cf8;
   --on-teal: #ffffff;
-  --teal-dark: #d8b2ff;
-  --coral: #ff70d8;
+  --teal-dark: #b8c0ff;
+  --coral: #60a5fa;
   --mustard: #f0c36a;
   --navy: #c2d0e4;
   --shadow: 0 24px 70px rgba(0, 0, 0, 0.32);
-  --hover-shadow: 0 16px 36px rgba(165, 61, 255, 0.22);
+  --hover-shadow: 0 16px 36px rgba(129, 140, 248, 0.2);
   --button-bg: rgba(26, 35, 52, 0.82);
   --avatar-bg: #232d40;
-  --accent-gradient: linear-gradient(135deg, #a53dff 0%, #ec2dbf 100%);
+  --accent-gradient: linear-gradient(135deg, #6366f1 0%, #2563eb 100%);
 }
 
 * {
@@ -61,8 +61,8 @@ body {
   font-family: "Work Sans", Arial, sans-serif;
   color: var(--ink);
   background:
-    radial-gradient(circle at 14% 18%, rgba(165, 61, 255, 0.11), transparent 28%),
-    radial-gradient(circle at 88% 10%, rgba(236, 45, 191, 0.08), transparent 26%),
+    radial-gradient(circle at 14% 18%, rgba(79, 70, 229, 0.08), transparent 28%),
+    radial-gradient(circle at 88% 10%, rgba(37, 99, 235, 0.07), transparent 26%),
     var(--paper);
 }
 
@@ -95,7 +95,7 @@ a {
   font-weight: 800;
   font-size: 1.05rem;
   text-decoration: none;
-  box-shadow: 0 14px 32px rgba(165, 61, 255, 0.26);
+  box-shadow: 0 14px 32px rgba(79, 70, 229, 0.2);
 }
 
 .nav {
@@ -128,7 +128,7 @@ a {
   padding: 0 22px;
   color: var(--on-teal);
   background: var(--accent-gradient);
-  box-shadow: 0 14px 28px rgba(165, 61, 255, 0.22);
+  box-shadow: 0 14px 28px rgba(79, 70, 229, 0.18);
 }
 
 .nav a:last-child:hover {
@@ -166,7 +166,7 @@ a {
 
 .theme-toggle:hover,
 .language-toggle:hover {
-  border-color: rgba(165, 61, 255, 0.44);
+  border-color: rgba(79, 70, 229, 0.36);
   box-shadow: var(--hover-shadow);
   transform: translateY(-2px);
 }
@@ -281,7 +281,7 @@ h3 {
 
 .button:hover,
 .contact-links a:hover {
-  border-color: rgba(165, 61, 255, 0.44);
+  border-color: rgba(79, 70, 229, 0.36);
   box-shadow: var(--hover-shadow);
   transform: translateY(-2px);
 }
@@ -290,6 +290,7 @@ h3 {
   border-color: var(--teal);
   color: var(--on-teal);
   background: var(--accent-gradient);
+  box-shadow: 0 14px 30px rgba(79, 70, 229, 0.18);
 }
 
 .button.secondary,
@@ -304,7 +305,7 @@ h3 {
   border-radius: 28px;
   padding: clamp(22px, 4vw, 34px);
   background:
-    linear-gradient(135deg, rgba(165, 61, 255, 0.08), transparent 44%),
+    linear-gradient(135deg, rgba(79, 70, 229, 0.07), transparent 44%),
     var(--surface-strong);
   box-shadow: var(--shadow);
 }
@@ -325,11 +326,11 @@ h3 {
 }
 
 .tag-list span {
-  border: 1px solid rgba(165, 61, 255, 0.22);
+  border: 1px solid rgba(79, 70, 229, 0.2);
   border-radius: 999px;
   padding: 8px 11px;
   color: var(--teal-dark);
-  background: rgba(165, 61, 255, 0.08);
+  background: rgba(79, 70, 229, 0.07);
   font-size: 0.88rem;
   font-weight: 800;
 }
@@ -397,6 +398,7 @@ h3 {
   border: 1px solid var(--soft-line);
   border-radius: 14px;
   background: var(--surface);
+  box-shadow: 0 12px 34px rgba(19, 34, 56, 0.04);
 }
 
 .project-card {
@@ -405,9 +407,9 @@ h3 {
 }
 
 .project-card.featured {
-  border-color: rgba(165, 61, 255, 0.35);
+  border-color: rgba(79, 70, 229, 0.28);
   background:
-    linear-gradient(135deg, rgba(165, 61, 255, 0.12), transparent 42%),
+    linear-gradient(135deg, rgba(79, 70, 229, 0.1), transparent 42%),
     var(--surface-strong);
 }
 
