@@ -344,6 +344,7 @@ h3 {
 
 .intro-grid {
   display: grid;
+  align-items: start;
   grid-template-columns: 0.8fr 1fr;
   gap: clamp(28px, 5vw, 70px);
   border-top: 1px solid var(--line);
@@ -354,7 +355,8 @@ h3 {
   margin: 0;
   color: var(--muted);
   font-size: 1.06rem;
-  line-height: 1.8;
+  line-height: 1.75;
+  text-align: left;
 }
 
 .section-heading {
