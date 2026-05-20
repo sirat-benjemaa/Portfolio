@@ -58,7 +58,7 @@ html {
 
 body {
   margin: 0;
-  font-family: "Work Sans", Arial, sans-serif;
+  font-family: "Inter", Arial, sans-serif;
   color: var(--ink);
   background:
     radial-gradient(circle at 14% 18%, rgba(79, 70, 229, 0.08), transparent 28%),
@@ -78,7 +78,7 @@ a {
   align-items: center;
   justify-content: flex-start;
   gap: 24px;
-  padding: 18px clamp(20px, 6vw, 112px);
+  padding: 18px clamp(20px, 5vw, 72px);
   border-bottom: 1px solid var(--soft-line);
   background: var(--header-bg);
   backdrop-filter: blur(20px);
@@ -86,16 +86,15 @@ a {
 
 .brand {
   display: grid;
-  width: 54px;
-  height: 54px;
+  width: 42px;
+  height: 42px;
   place-items: center;
-  border-radius: 999px;
+  border-radius: 8px;
   color: var(--on-teal);
   background: var(--accent-gradient);
   font-weight: 800;
-  font-size: 1.05rem;
   text-decoration: none;
-  box-shadow: 0 14px 32px rgba(79, 70, 229, 0.2);
+  box-shadow: 0 10px 24px rgba(79, 70, 229, 0.2);
 }
 
 .nav {
@@ -109,9 +108,6 @@ a {
 }
 
 .nav a {
-  display: inline-flex;
-  min-height: 42px;
-  align-items: center;
   text-decoration: none;
   transition:
     color 180ms ease,
@@ -121,19 +117,6 @@ a {
 
 .nav a:hover {
   color: var(--teal-dark);
-}
-
-.nav a:last-child {
-  border-radius: 6px;
-  padding: 0 22px;
-  color: var(--on-teal);
-  background: var(--accent-gradient);
-  box-shadow: 0 14px 28px rgba(79, 70, 229, 0.18);
-}
-
-.nav a:last-child:hover {
-  color: var(--on-teal);
-  transform: translateY(-1px);
 }
 
 .header-actions {
